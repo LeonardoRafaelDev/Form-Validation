@@ -14,11 +14,11 @@
   - [ ]Ter ao menos um caractere especial
   - Projeto de exemplo [https://validatepassword.netlify.app/](https://validatepassword.netlify.app/)
     [https://github.com/gitlherme/validate-password-vue](https://github.com/gitlherme/validate-password-vue)
-- [X]Celular
-  - [ ]Criar máscara de celular
-- [X]CPF
+- [x] Celular
+  - [ ] Criar máscara de celular
+- [x] CPF
 
-  - [ ]Criar máscara de CPF
+  - [ ] Criar máscara de CPF
 
 - [ ] Se um campo for preenchido corretamente, deve ter uma borda verde.
 
