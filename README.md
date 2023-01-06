@@ -8,10 +8,10 @@
   - [ ] Precisa ser um e-mail válido (dar uma olhada nos tipos de input existentes e ver qual mais se adequa)
 - [x] Senha
   - [ ] Precisa ser uma senha válida (dar uma olhada nos tipos de input existentes e ver qual mais se adequa)
-  - [ ]Ter ao menos 8 caracteres
-  - [ ]Ter pelo menos uma letra minúscula
-  - [ ]Ter ao menos um número
-  - [ ]Ter ao menos um caractere especial
+  - [ ] Ter ao menos 8 caracteres
+  - [ ] Ter pelo menos uma letra minúscula
+  - [ ] Ter ao menos um número
+  - [ ] Ter ao menos um caractere especial
   - Projeto de exemplo [https://validatepassword.netlify.app/](https://validatepassword.netlify.app/)
     [https://github.com/gitlherme/validate-password-vue](https://github.com/gitlherme/validate-password-vue)
 - [x] Celular
