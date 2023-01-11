@@ -18,7 +18,7 @@
   - [ ] Criar máscara de celular
 - [x] CPF
 
-  - [ ] Criar máscara de CPF
+  - [ X ] Criar máscara de CPF
 
 - [ ] Se um campo for preenchido corretamente, deve ter uma borda verde.
 
