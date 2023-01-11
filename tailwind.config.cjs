@@ -10,6 +10,7 @@ module.exports = {
         red: "#FF4949",
         divider: "#1C2235",
         primary: "#C700FF",
+        green: "#00a000",
       },
     },
   },

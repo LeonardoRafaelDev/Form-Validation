@@ -10,7 +10,7 @@ const updateColors = (input, error = false) => {
   }
   document.querySelector(`#${input} > div > p`).classList.add("hidden");
   document.querySelector(`#${input} > label`).classList.remove("text-red");
-  document.querySelector(`#${input} > div > input`).classList.add("focus:ring-primary", "ring-0", "border-primary");
+  document.querySelector(`#${input} > div > input`).classList.add("focus:ring-green", "ring-0", "border-green");
   document.querySelector(`#${input} > div > input`).classList.remove("border-purple-400", "focus:ring-red", "ring-red");
   document.querySelector(`#${input} > div > span`).classList.add("block");
   document.querySelector(`#${input} > div > span`).classList.remove("hidden");
@@ -25,12 +25,36 @@ document.querySelector("#name").addEventListener("input", (e) => {
   updateColors("name", true);
 });
 
+document.querySelector("#surname").addEventListener("input", (e) => {
+  if (e.target.value.length > 3) {
+    updateColors("surname");
+    return;
+  }
+  updateColors("surname", true);
+});
+
 document.querySelector("#email").addEventListener("input", (e) => {
   if (e.target.validity.valid) {
     updateColors("email");
     return;
   }
   updateColors("email", true);
+});
+
+document.querySelector("#tel").addEventListener("input", (e) => {
+  if (e.target.value.length >= 14) {
+    updateColors("tel");
+    return;
+  }
+  updateColors("tel", true);
+});
+
+document.querySelector("#cpf").addEventListener("input", (e) => {
+  if (e.target.value.length >= 14) {
+    updateColors("cpf");
+    return;
+  }
+  updateColors("cpf", true);
 });
 
 //validacao cpf
@@ -48,4 +72,34 @@ function formatarCPF(e) {
   valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
 
   e.target.value = valor;
+}
+
+//validacao tell
+const tellValidation = document.querySelector("#tel");
+
+tellValidation.addEventListener("keyup", formatarTelefone);
+
+function formatarTelefone(e) {
+  let valor = e.target.value.replace(/\D/g, "");
+
+  valor = valor.replace(/^(\d\d)(\d)/g, "($1)$2");
+
+  valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+  e.target.value = valor;
+}
+
+function store() {
+  let nome = document.getElementsByName("nome");
+  localStorage.setItem("nome", nome.value);
+  let sobrenome = document.getElementsByName("sobrenome");
+  localStorage.setItem("sobrenome", sobrenome.value);
+  let senha = document.getElementsByName("senha");
+  localStorage.setItem("senha", senha.value);
+  let email = document.getElementsByName("email");
+  localStorage.setItem("email", email.value);
+  let numero = document.getElementsByName("telefone");
+  localStorage.setItem("numero", numero.value);
+  let cpf = document.getElementsByName("cpf");
+  localStorage.setItem("cpf", cpf.value);
 }

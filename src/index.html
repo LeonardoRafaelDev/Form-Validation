@@ -12,12 +12,13 @@
       <section class="mx-auto my-32 max-w-4xl flex justify-center">
         <div class="w-6/12 p-5">
           <h1 class="mb-2">Cria uma conta ae lek</h1>
-          <form class="w-full" method="post" action="">
+          <form class="w-full" method="post" action="/dashboard.html" name="cadastro">
             <!--nome-->
             <div class="mb-6" id="name">
               <label for="name" class="block mb-2 text-sm font-bold text-black">Nome</label>
               <div class="relative">
                 <input
+                  name="nome"
                   type="text"
                   id="name"
                   class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
@@ -41,6 +42,7 @@
               <label for="surname" class="block mb-2 text-sm font-bold text-black">sobrenome</label>
               <div class="relative">
                 <input
+                  name="sobrenome"
                   type="text"
                   id="surname"
                   class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
@@ -59,11 +61,36 @@
               </div>
             </div>
 
+            <!--senha-->
+            <div class="mb-6" id="password">
+              <label for="password" class="block mb-2 text-sm font-bold text-black">Senha</label>
+              <div class="relative">
+                <input
+                  name="senha"
+                  type="password"
+                  id="password"
+                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
+                  placeholder="Digite uma senha"
+                  required />
+                <p class="text-red hidden">Adicione uma senha correta</p>
+                <span class="hidden absolute top-4 right-4"
+                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                      fill="#49FF7C" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
             <!--email-->
             <div class="mb-6" id="email">
               <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Email</label>
               <div class="relative">
                 <input
+                  name="email"
                   type="email"
                   id="email"
                   class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
@@ -87,6 +114,8 @@
               <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Telefone</label>
               <div class="relative">
                 <input
+                  name="telefone"
+                  maxlength="14"
                   type="tel"
                   id="tel"
                   class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
@@ -110,6 +139,7 @@
               <label for="text" class="block mb-2 text-sm text-black font-bold lname-2">Cpf</label>
               <div class="relative">
                 <input
+                  name="cpf"
                   maxlength="14"
                   type="text"
                   id="cpf"
@@ -130,7 +160,7 @@
             </div>
 
             <div class="flex justify-center">
-              <button type="submit" class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center">Enviar Mensagem</button>
+              <button onClick="store()" type="submit" class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center" >Enviar cadastro</button>
             </div>
           </form>
         </div>
@@ -142,7 +172,23 @@
     </main>
 
     <footer></footer>
+<script>
+  function store() {
+  const nome = document.getElementsByName("nome").value;
+  localStorage.setItem("nome", nome.value);
+  const sobrenome = document.getElementsByName("sobrenome").value;
+  localStorage.setItem("sobrenome", sobrenome.value);
+  const senha = document.getElementsByName("senha").value;
+  localStorage.setItem("senha", senha.value);
+  const email = document.getElementsByName("email").value;
+  localStorage.setItem("email", email.value);
+  const numero = document.getElementsByName("telefone").value;
+  localStorage.setItem("numero", numero.value);
+  const cpf = document.getElementsByName("cpf").value;
+  localStorage.setItem("cpf", cpf.value);
+}
 
+</script>
     <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script type="module" src="/main.js"></script>
   </body>

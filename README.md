@@ -5,7 +5,7 @@
 - [x] Primeiro Nome
 - [x] Sobrenome
 - [x] E-mail
-  - [ ] Precisa ser um e-mail válido (dar uma olhada nos tipos de input existentes e ver qual mais se adequa)
+  - [x] Precisa ser um e-mail válido (dar uma olhada nos tipos de input existentes e ver qual mais se adequa)
 - [x] Senha
   - [ ] Precisa ser uma senha válida (dar uma olhada nos tipos de input existentes e ver qual mais se adequa)
   - [ ] Ter ao menos 8 caracteres
@@ -15,10 +15,10 @@
   - Projeto de exemplo [https://validatepassword.netlify.app/](https://validatepassword.netlify.app/)
     [https://github.com/gitlherme/validate-password-vue](https://github.com/gitlherme/validate-password-vue)
 - [x] Celular
-  - [ ] Criar máscara de celular
+  - [x] Criar máscara de celular
 - [x] CPF
 
-  - [ X ] Criar máscara de CPF
+  - [x] Criar máscara de CPF
 
 - [ ] Se um campo for preenchido corretamente, deve ter uma borda verde.
 
