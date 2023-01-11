@@ -160,7 +160,9 @@
             </div>
 
             <div class="flex justify-center">
-              <button onClick="store()" type="submit" class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center" >Enviar cadastro</button>
+              <button onClick="store()" type="submit" class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center">
+                Enviar cadastro
+              </button>
             </div>
           </form>
         </div>
@@ -170,25 +172,6 @@
         </div>
       </section>
     </main>
-
-    <footer></footer>
-<script>
-  function store() {
-  const nome = document.getElementsByName("nome").value;
-  localStorage.setItem("nome", nome.value);
-  const sobrenome = document.getElementsByName("sobrenome").value;
-  localStorage.setItem("sobrenome", sobrenome.value);
-  const senha = document.getElementsByName("senha").value;
-  localStorage.setItem("senha", senha.value);
-  const email = document.getElementsByName("email").value;
-  localStorage.setItem("email", email.value);
-  const numero = document.getElementsByName("telefone").value;
-  localStorage.setItem("numero", numero.value);
-  const cpf = document.getElementsByName("cpf").value;
-  localStorage.setItem("cpf", cpf.value);
-}
-
-</script>
     <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script type="module" src="/main.js"></script>
   </body>

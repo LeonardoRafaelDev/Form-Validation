@@ -20,11 +20,11 @@
 
   - [x] Criar máscara de CPF
 
-- [ ] Se um campo for preenchido corretamente, deve ter uma borda verde.
+- [x] Se um campo for preenchido corretamente, deve ter uma borda verde.
 
-- [ ] Se um campo for preenchido incorretamente, deve ter uma borda vermelha.
+- [x] Se um campo for preenchido incorretamente, deve ter uma borda vermelha.
 
-- [ ] Ao submeter o formulário deve fazer a validação pra ver se todos os campos estão certos e se não estiver, colocar um <span> de warning embaixo do campo.
+- [x] Ao submeter o formulário deve fazer a validação pra ver se todos os campos estão certos e se não estiver, colocar um <span> de warning embaixo do campo.
 
 - [ ] Quando o formulário for submetido, voce redireciona o usuário pra uma tela de "dashboard", onde vai ter uma listagem dos campos que ele preencheu.
 
