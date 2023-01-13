@@ -2,7 +2,7 @@ const updateColors = (input, error = false) => {
   if (error) {
     document.querySelector(`#${input} > div > p`).classList.remove("hidden");
     document.querySelector(`#${input} > label`).classList.add("text-red");
-    document.querySelector(`#${input} > div > input`).classList.remove("focus:ring-primary", "border-purple-400", "ring-primary");
+    document.querySelector(`#${input} > div > input`).classList.remove("focus:ring-primary", "border-purple-400", "ring-primary", "focus:ring-green", "ring-0", "border-green");
     document.querySelector(`#${input} > div > span`).classList.remove("block");
     document.querySelector(`#${input} > div > span`).classList.add("hidden");
     document.querySelector(`#${input} > div > input`).classList.add("ring-red", "border-red", "focus:ring-red");
@@ -17,45 +17,50 @@ const updateColors = (input, error = false) => {
   document.querySelector(`#${input} > div > input`).classList.remove("border-red");
 };
 
-document.querySelector("#name").addEventListener("input", (e) => {
+document.querySelector("#divname").addEventListener("input", (e) => {
   if (e.target.value.length > 5) {
-    updateColors("name");
+    updateColors("divname",);
     return;
   }
-  updateColors("name", true);
+  updateColors("divname", true);
 });
 
-document.querySelector("#surname").addEventListener("input", (e) => {
+document.querySelector("#divsurname").addEventListener("input", (e) => {
   if (e.target.value.length > 3) {
-    updateColors("surname");
+    updateColors("divsurname");
     return;
   }
-  updateColors("surname", true);
+  updateColors("divsurname", true);
 });
 
-document.querySelector("#email").addEventListener("input", (e) => {
+document.querySelector("#divemail").addEventListener("input", (e) => {
   if (e.target.validity.valid) {
-    updateColors("email");
+    updateColors("divemail");
     return;
   }
-  updateColors("email", true);
+  updateColors("divemail", true);
 });
 
-document.querySelector("#tel").addEventListener("input", (e) => {
+document.querySelector("#divtel").addEventListener("input", (e) => {
   if (e.target.value.length >= 14) {
-    updateColors("tel");
+    updateColors("divtel");
     return;
   }
-  updateColors("tel", true);
+  updateColors("divtel", true);
 });
 
-document.querySelector("#cpf").addEventListener("input", (e) => {
+document.querySelector("#divcpf").addEventListener("input", (e) => {
   if (e.target.value.length >= 14) {
-    updateColors("cpf");
+    updateColors("divcpf");
     return;
   }
-  updateColors("cpf", true);
+  updateColors("divcpf", true);
 });
+
+
+
+
+
 
 //validacao cpf
 const input = document.querySelector("#cpf");
@@ -89,17 +94,26 @@ function formatarTelefone(e) {
   e.target.value = valor;
 }
 
+
 function store() {
-  let nome = document.getElementsByName("nome");
+  const nome = document.querySelector("#name");
   localStorage.setItem("nome", nome.value);
-  let sobrenome = document.getElementsByName("sobrenome");
+  const sobrenome = document.querySelector("#surname");
   localStorage.setItem("sobrenome", sobrenome.value);
-  let senha = document.getElementsByName("senha");
+  const senha = document.querySelector("#password");
   localStorage.setItem("senha", senha.value);
-  let email = document.getElementsByName("email");
+  const email = document.querySelector("#email");
   localStorage.setItem("email", email.value);
-  let numero = document.getElementsByName("telefone");
+  const numero = document.querySelector("#tel");
   localStorage.setItem("numero", numero.value);
-  let cpf = document.getElementsByName("cpf");
+  const cpf = document.querySelector("#cpf");
   localStorage.setItem("cpf", cpf.value);
+
 }
+
+const ButtonSubmit = document.querySelector("#SubmitBttn")
+
+ButtonSubmit.addEventListener("click", function(){
+  store();
+  window.location.href="/dashboard.html"
+})
