@@ -26,7 +26,7 @@
 
 - [x] Ao submeter o formulário deve fazer a validação pra ver se todos os campos estão certos e se não estiver, colocar um <span> de warning embaixo do campo.
 
-- [ ] Quando o formulário for submetido, voce redireciona o usuário pra uma tela de "dashboard", onde vai ter uma listagem dos campos que ele preencheu.
+- [X] Quando o formulário for submetido, voce redireciona o usuário pra uma tela de "dashboard", onde vai ter uma listagem dos campos que ele preencheu.
 
 - armazenar os dados no localStorage
 - key: user

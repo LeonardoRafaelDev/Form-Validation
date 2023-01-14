@@ -1,178 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Login do Leleo</title>
-  </head>
-  <body class="text-gray-700">
-    <main>
-      <section class="mx-auto my-32 max-w-4xl flex justify-center">
-        <div class="w-6/12 p-5">
-          <h1 class="mb-2">Cria uma conta ae lek</h1>
-          <form class="w-full" method="post" action="/dashboard.html" name="cadastro">
-            <!--nome-->
-            <div class="mb-6" id="name">
-              <label for="name" class="block mb-2 text-sm font-bold text-black">Nome</label>
-              <div class="relative">
-                <input
-                  name="nome"
-                  type="text"
-                  id="name"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
-                  placeholder="Digite seu nome"
-                  required />
-                <p class="text-red hidden">Adicione um nome correto</p>
-                <span class="hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
 
-            <!--sobrenome-->
-            <div class="mb-6" id="surname">
-              <label for="surname" class="block mb-2 text-sm font-bold text-black">sobrenome</label>
-              <div class="relative">
-                <input
-                  name="sobrenome"
-                  type="text"
-                  id="surname"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
-                  placeholder="Digite seu sobrenome"
-                  required />
-                <p class="text-red hidden">Adicione um sobrenome correto</p>
-                <span class="hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Login do Leleo</title>
+</head>
 
-            <!--senha-->
-            <div class="mb-6" id="password">
-              <label for="password" class="block mb-2 text-sm font-bold text-black">Senha</label>
-              <div class="relative">
-                <input
-                  name="senha"
-                  type="password"
-                  id="password"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
-                  placeholder="Digite uma senha"
-                  required />
-                <p class="text-red hidden">Adicione uma senha correta</p>
-                <span class="hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <!--email-->
-            <div class="mb-6" id="email">
-              <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Email</label>
-              <div class="relative">
-                <input
-                  name="email"
-                  type="email"
-                  id="email"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
-                  placeholder="Digite seu email"
-                  required />
-                <p class="text-red hidden namef-2">Adicione um email valido</p>
-                <span class="emailicon hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <!--telefone-->
-            <div class="mb-6" id="tel">
-              <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Telefone</label>
-              <div class="relative">
-                <input
-                  name="telefone"
-                  maxlength="14"
-                  type="tel"
-                  id="tel"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
-                  placeholder="Digite seu numero de telefone"
-                  required />
-                <p class="text-red hidden namef-2">Adicione um numero de telefone valido</p>
-                <span class="emailicon hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <!--cpf-->
-            <div class="mb-6" id="cpf">
-              <label for="text" class="block mb-2 text-sm text-black font-bold lname-2">Cpf</label>
-              <div class="relative">
-                <input
-                  name="cpf"
-                  maxlength="14"
-                  type="text"
-                  id="cpf"
-                  class="border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
-                  placeholder="Digite seu Cpf"
-                  required />
-                <p class="text-red hidden namef-2">Adicione um Cpf valido</p>
-                <span class="emailicon hidden absolute top-4 right-4"
-                  ><svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
-                      fill="#49FF7C" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-
-            <div class="flex justify-center">
-              <button onClick="store()" type="submit" class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center">
-                Enviar cadastro
-              </button>
-            </div>
-          </form>
+<body class="text-gray-700">
+  <main>
+    <section class="mx-auto my-32 max-w-4xl flex justify-center">
+      <div class="w-6/12 p-5">
+        <h1 class="mb-2">Cria uma conta ae lek</h1>
+        <!--nome-->
+        <div class="mb-6" id="divname">
+          <label for="name" class="block mb-2 text-sm font-bold text-black">Nome</label>
+          <div class="relative">
+            <input name="nome" type="text" id="name"
+              class="name border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
+              placeholder="Digite seu nome" required />
+            <p class="text-red hidden">Adicione um nome correto</p>
+            <span class="hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
         </div>
 
-        <div class="w-6/12 hidden md:flex md:ml-10">
-          <lottie-player src="/38435-register.json" speed="1" style="width: 500px; height: 500px" loop autoplay></lottie-player>
+        <!--sobrenome-->
+        <div class="mb-6" id="divsurname">
+          <label for="surname" class="block mb-2 text-sm font-bold text-black">sobrenome</label>
+          <div class="relative">
+            <input name="sobrenome" type="text" id="surname"
+              class="surname border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
+              placeholder="Digite seu sobrenome" required />
+            <p class="text-red hidden">Adicione um sobrenome correto</p>
+            <span class="hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
         </div>
-      </section>
-    </main>
-    <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+        <!--senha-->
+        <div class="mb-6" id="divpassword">
+          <label for="password" class="block mb-2 text-sm font-bold text-black">Senha</label>
+          <div class="relative">
+            <input name="senha" type="password" id="password"
+              class="password border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5 pr-10"
+              placeholder="Digite uma senha" required />
+            <p class="text-red hidden">Adicione uma senha correta</p>
+            <span class="hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!--email-->
+        <div class="mb-6" id="divemail">
+          <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Email</label>
+          <div class="relative">
+            <input name="email" type="email" id="email"
+              class="email border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
+              placeholder="Digite seu email" required />
+            <p class="text-red hidden namef-2">Adicione um email valido</p>
+            <span class="emailicon hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!--telefone-->
+        <div class="mb-6" id="divtel">
+          <label for="email" class="block mb-2 text-sm text-black font-bold lname-2">Telefone</label>
+          <div class="relative">
+            <input name="telefone" maxlength="14" type="tel" id="tel"
+              class="tel border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
+              placeholder="Digite seu numero de telefone" required />
+            <p class="text-red hidden namef-2">Adicione um numero de telefone valido</p>
+            <span class="emailicon hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!--cpf-->
+        <div class="mb-6" id="divcpf">
+          <label for="text" class="block mb-2 text-sm text-black font-bold lname-2">Cpf</label>
+          <div class="relative">
+            <input name="cpf" maxlength="14" type="text" id="cpf"
+              class="cpf border-2 border-purple-400 focus:ring-2 focus:outline-none focus:ring-primary shadow-sm text-black text-sm text-text rounded-lg block w-full p-2.5"
+              placeholder="Digite seu Cpf" required />
+            <p class="text-red hidden namef-2">Adicione um Cpf valido</p>
+            <span class="emailicon hidden absolute top-4 right-4"><svg width="18" height="13" viewBox="0 0 18 13"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M17.0481 0.851472C17.5168 1.3201 17.5168 2.0799 17.0481 2.54853L7.44814 12.1485C6.97951 12.6172 6.21971 12.6172 5.75108 12.1485L0.951081 7.34853C0.482452 6.8799 0.482452 6.1201 0.951081 5.65147C1.41971 5.18284 2.17951 5.18284 2.64814 5.65147L6.59961 9.60294L15.3511 0.851472C15.8197 0.382843 16.5795 0.382843 17.0481 0.851472Z"
+                  fill="#49FF7C" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button id="SubmitBttn"
+            class="text-white bg-purple-500 font-bold rounded-lg text-sm md:text-base w-full h-11 text-center">
+            Enviar cadastro
+          </button>
+        </div>
+
+      </div>
+
+      <div class="w-6/12 hidden md:flex md:ml-10">
+        <lottie-player src="/38435-register.json" speed="1" style="width: 500px; height: 500px" loop
+          autoplay></lottie-player>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
